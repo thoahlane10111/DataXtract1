@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataXtract</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to DataXtract</h1>
+    </header>
+    <div class="container">
+        <h2>About DataXtract</h2>
+        <p>DataXtract is a comprehensive data extraction and analysis system designed to streamline the process of extracting data from Excel sheets, storing it securely, generating customizable reports, and visualizing data through analysis charts.</p>
+        <h2>Get Started</h2>
+        <p>To get started, upload your Excel sheets and explore the powerful features of DataXtract!</p>
+        <form action="/upload" method="post">
+            <input type="file" name="excel_file" accept=".xls,.xlsx" required>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
