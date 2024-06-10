@@ -2,7 +2,6 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-class DataEntry(db.Model):
+class ExampleModel(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    # Define your database fields here
-
+    data = db.Column(db.String(100))

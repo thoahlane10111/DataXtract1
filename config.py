@@ -1,5 +1,7 @@
-# Placeholder code for config.py
+import os
+
 class Config:
-    SECRET_KEY = 'your_secret_key_here'
-    DEBUG = True  # Set to False in production
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', 'sqlite:///data.db')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SECRET_KEY = os.getenv('SECRET_KEY', 'mysecretkey')
 

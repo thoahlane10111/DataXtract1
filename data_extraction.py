@@ -5,4 +5,3 @@ def extract_data_from_excel(excel_file_path):
     df = pd.read_excel(excel_file_path)
     # Perform data cleaning and preprocessing if needed
     return df
-
